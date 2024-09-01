@@ -14,7 +14,7 @@ def calculate_marketcap_change():
         percentage_change = (future_marketcap - current_marketcap) / current_marketcap * 100
         future_investment_value = (investment_amount / current_marketcap) * future_marketcap
 
-        # Add the current calculation to the history
+        
         history.append({
             "coin_name": coin_name,
             "current_marketcap": current_marketcap,
@@ -89,12 +89,12 @@ history_label = ttk.Label(root, text="Calculation History:")
 history_listbox = tk.Listbox(root, width=40, height=10)
 history_listbox.bind("<<ListboxSelect>>", show_history)
 
-# Apply some styling
+# Styling
 style = ttk.Style(root)
 style.theme_use("default")
 style.configure("Accent.TButton", background="green", foreground="white", font=("Arial", 12, "bold"))
 
-# Lay out the GUI elements
+# GUI elements
 coin_name_label.grid(row=0, column=0, padx=10, pady=10)
 coin_name_entry.grid(row=0, column=1, padx=10, pady=10)
 
